@@ -1,0 +1,15 @@
+//Colors
+$tileColor: cornflowerblue;
+$gameBoardColor: #DCF600;
+$tileHover: #7DBD00;
+
+//Sizes
+$tileLength: 70px;
+$tileMargin: 1px;
+$boardSize: ($tileLength * 4) + ($tileMargin * 8);
+
+//Font
+$siteFont: 'Verdana';
+%boldFont {
+    font-weight: bold;
+}

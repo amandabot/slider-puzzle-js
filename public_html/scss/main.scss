@@ -1,0 +1,83 @@
+@import 'definitions';
+
+body {
+    font-family: $siteFont;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+#scoreboard, #controlPanel {
+    margin-top: 20px;
+    text-align: center;
+    @extend %boldFont;
+}
+
+#scoreboard span:first-of-type {
+    margin-right: 20px;
+}
+
+button {
+    padding: 10px;
+    background-color: $tileColor;
+    outline: none;
+    font-size: 1rem;
+    @extend %boldFont;
+}
+
+button:hover {
+    background-color: $tileHover;
+}
+
+#gameboard {
+    background-color: $gameBoardColor;
+    width: $boardSize;
+    height: $boardSize;
+    position: relative;
+    z-index: 0;
+    margin: 0 auto;
+}
+
+%tile {
+    font-weight: bold;
+    box-sizing: border-box;
+    width: $tileLength;
+    height: $tileLength;
+    margin: $tileMargin;
+    text-align: center;
+    padding-top: $tileLength / 3;
+    display: inline-block;
+    position: relative;
+}
+
+.puzzleTile {
+    @extend %tile;
+    background-color: $tileColor;
+    z-index: 2;
+}
+
+.puzzleTile::selection,
+#gameboard::selection {
+    background-color: transparent;
+}
+
+.puzzleTile:hover {
+    background-color: $tileHover;
+}
+
+#emptyTile {
+    @extend %tile;
+    @extend %noHighlight;
+    border: none;
+    z-index: 1;
+}
+
+#emptyTile::selection {
+    @extend %noHighlight;
+}
+
+%noHighlight {
+    background-color: transparent;
+    color: transparent;
+}
