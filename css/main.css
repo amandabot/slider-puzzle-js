@@ -1,0 +1,62 @@
+#scoreboard, #controlPanel, button {
+  font-weight: bold; }
+
+body {
+  font-family: "Verdana"; }
+
+h1, h2, h3 {
+  text-align: center; }
+
+#scoreboard, #controlPanel {
+  margin-top: 20px;
+  text-align: center; }
+
+#scoreboard span:first-of-type {
+  margin-right: 20px; }
+
+button {
+  padding: 10px;
+  background-color: cornflowerblue;
+  outline: none;
+  font-size: 1rem; }
+
+button:hover {
+  background-color: #7dbd00; }
+
+#gameboard {
+  background-color: #dcf600;
+  width: 288px;
+  height: 288px;
+  position: relative;
+  z-index: 0;
+  margin: 0 auto; }
+
+.puzzleTile, #emptyTile {
+  font-weight: bold;
+  box-sizing: border-box;
+  width: 70px;
+  height: 70px;
+  margin: 1px;
+  text-align: center;
+  padding-top: 23.33333px;
+  display: inline-block;
+  position: relative; }
+
+.puzzleTile {
+  background-color: cornflowerblue;
+  z-index: 2; }
+
+.puzzleTile::selection,
+#gameboard::selection {
+  background-color: transparent; }
+
+.puzzleTile:hover {
+  background-color: #7dbd00; }
+
+#emptyTile {
+  border: none;
+  z-index: 1; }
+
+#emptyTile, #emptyTile::selection {
+  background-color: transparent;
+  color: transparent; }
